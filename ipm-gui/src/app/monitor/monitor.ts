@@ -2,7 +2,6 @@ export class Monitor {
   id: number;
   loginCin: string;
   senha: string;
-}
 
 constructor() {
   this.clean();
@@ -24,4 +23,6 @@ copyFrom(from: Monitor): void {
     this.id = from.id;
     this.loginCin = from.loginCin;
     this.senha = from.senha;
+}
+
 }

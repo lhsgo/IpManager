@@ -9,12 +9,15 @@ import { AppComponent } from './app.component';
 import { NotasComponent } from './notas/notas.component';
 import { AlunoComponent } from './aluno/aluno.component';
 import { AlunoService } from './aluno/aluno.service';
+import { MonitorComponent } from './monitor/monitor.component'
+import { MonitorService } from './monitor/monitor.service'
 
 @NgModule({
   declarations: [
     AppComponent,
     AlunoComponent,
     NotasComponent,
+    MonitorComponent
   ],
   imports: [
     BrowserModule,
@@ -28,10 +31,14 @@ import { AlunoService } from './aluno/aluno.service';
       {
         path: 'notas',
         component: NotasComponent
+      },
+      {
+        path: 'register',
+        component: MonitorComponent
       }
     ])
   ],
-  providers: [AlunoService],
+  providers: [AlunoService, MonitorComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
