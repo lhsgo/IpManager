@@ -36,7 +36,7 @@ export class AlunoService {
     aluno = aluno.clone();
     for(let a of this.alunos){
       if(a.loginCin == aluno.loginCin){
-        a.faltas = aluno.faltas + 2;
+        a.faltas = aluno.faltas;
       }
     }
   }
