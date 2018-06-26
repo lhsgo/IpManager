@@ -1,0 +1,64 @@
+<html>
+
+  <div class="wrapper">
+
+    <div class="header">
+
+      <div class="input-holder">
+
+        <div class="nome-input">
+          <input [(ngModel)]="lista.nome" name="nome" placeholder="Nome da Lista">
+        </div>
+
+        <div class="caminho-input">
+          <input [(ngModel)]="lista.endereco" name="endereço" placeholder="Link">
+        </div>
+
+        <div class="dia-input">
+          <input [(ngModel)]="lista.dataInicio" name="dataLançamento" placeholder="Data de Lançamento">
+        </div>
+
+        <div class="dia-input">
+          <input [(ngModel)]="lista.dataEntrega" name="dataFim" placeholder="Data de Entrega">
+        </div>
+
+      </div>
+
+      <div class="button-holder">
+        <button (click)="criar(Lista)">Registrar</button>
+      </div>
+
+    </div>
+
+    <div class="classes">
+      <table>
+
+          <thead>
+            <th>
+              Nome
+            </th>
+            <th>
+              Caminho
+            </th>
+            <th>
+              Data de Lançamento
+            </th>
+            <th>
+              Data de Entrega
+            </th>
+          </thead>
+        <tbody>
+          <tr *ngFor="let a of listas">
+            <td class="info">{{a.nome}}</td>
+            <td><a href="['/lista', a.endereco]">link</a></td>
+            <td class="info">{{a.dataLançamento}}</td>
+            <td class="info">{{a.dataEntrega}}</td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+
+  </div>
+
+</html>
