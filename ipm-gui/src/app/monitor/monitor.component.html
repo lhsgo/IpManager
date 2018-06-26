@@ -1,0 +1,39 @@
+<div class="wrapper">
+
+  <div class="container">
+
+    <div class="image">
+      <img src="https://cdn3.iconfinder.com/data/icons/luchesa-vol-9/128/Html-512.png" class="logo">
+    </div>
+
+    <div class="info-container">
+      <h1> Registrar Monitor </h1>
+    </div>
+
+    <div class="register-form">
+
+      <div class="input-holder">
+
+        <div class="login-input">
+          <input [(ngModel)]="monitor.loginCin" name="loginCin" placeholder="Login Cin">
+        </div>
+
+        <div class="password-input">
+          <input [(ngModel)]="monitor.senha" name="password" placeholder="Password">
+        </div>
+
+      </div>
+
+      <div class="button-holder">
+        <button (click)="criar(monitor)">Registrar</button>
+      </div>
+
+      <div class="register-report">
+        <h2 *ngIf="userRegistered">User already in the system.</h2>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
